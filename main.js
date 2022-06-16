@@ -17,8 +17,17 @@ function micServe(event) {
                 heart.className = "";
             }
         })
+        .catch(error => {
+            const modal = document.getElementById('modal');
+            modal.className = "";
+            modal.innerHTML = error;
+            setTimeout(() => modal.className = "hidden", 3000);
+        });
+
 
 }
+//add event listener 
+for (const glyph of like) { glyph.addEventListener("click", likeback) }
 
 
 
